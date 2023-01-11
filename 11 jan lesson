@@ -1,0 +1,26 @@
+пакеты для vs
+- app ui
+- asp.net
+- azure sdk
+- разрааботка приложений для универсальной платформы
+
+// билдер асп для подключения сервисов
+
+// WebApplicationBuilder:
+// конфигурация приложения
+// добавление сервисов
+// настройка логгирования в приложении
+// установка окружения приложения
+// конф. объектов IHostBuilder и IWebHostBuilder для создания хоста приложения
+
+var builder = WebApplication.CreateBuilder(args);
+
+var app = builder.Build();
+
+// маппинг путей
+app.MapGet("/", () => "Hello World!");
+app.Run();
+
+MiddleWare компоненты встраиваются с помощью методов расширений Run, Map и Use интерфейса IApplicationBuilder (Authentication, Authorization, 
+Cookie Police, CORS, DeveloperExceptionPage, Diagostics, Forwareded Headers, Health Check)
+WebApplication реализует IApplicationBuilder
